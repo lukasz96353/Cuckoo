@@ -36,21 +36,24 @@ public class mainController implements Initializable{
 
     @FXML
     private ImageView enterAp4;
+    
+    @FXML
+    private Button goButton;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 		//open window 1
-		enterAp1.setOnMouseClicked((Event event)->openNewWindow("/view/Application1Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
+		goButton.setOnMouseClicked((Event event)->openNewWindow("/view/MainView.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
 
-		//open window 2
-		enterAp2.setOnMouseClicked((Event event)->openNewWindow("/view/Application2Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
-
-		//open window 3
-		enterAp3.setOnMouseClicked((Event event)->openNewWindow("/view/Application3Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
-
-		//open window 4
-		enterAp4.setOnMouseClicked((Event event)->openNewWindow("/view/Application4Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
+//		//open window 2
+//		enterAp2.setOnMouseClicked((Event event)->openNewWindow("/view/Application2Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
+//				
+//		//open window 3
+//		enterAp3.setOnMouseClicked((Event event)->openNewWindow("/view/Application3Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
+//
+//		//open window 4
+//		enterAp4.setOnMouseClicked((Event event)->openNewWindow("/view/Application4Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
 
 	}
 
