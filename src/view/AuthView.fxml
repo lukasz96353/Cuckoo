@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="480.0" maxWidth="640.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainController">
+<BorderPane fx:id="rootPane" maxHeight="480.0" maxWidth="640.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainController">
    <center>
       <Pane prefHeight="200.0" prefWidth="640.0" scaleShape="false" BorderPane.alignment="CENTER">
          <children>
@@ -35,7 +35,7 @@
                </font>
             </Label>
             <Label layoutX="399.0" layoutY="451.0" prefHeight="17.0" prefWidth="31.0" text="2018" />
-            <Button id="go" fx:id="goButton" defaultButton="true" layoutX="98.0" layoutY="254.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Let's go!" />
+            <Button id="go" fx:id="goButton" defaultButton="true" layoutX="98.0" layoutY="254.0" mnemonicParsing="false" onAction="#clickedGoButton" prefHeight="25.0" prefWidth="83.0" text="Let's go!" />
      
             <Label layoutX="17.0" layoutY="139.0" opacity="0.8" prefHeight="17.0" prefWidth="178.0" text="Please login to Cuckoo's account" />
             <Label layoutX="13.0" layoutY="325.0" opacity="0.78" text="or register by clicking button below" />

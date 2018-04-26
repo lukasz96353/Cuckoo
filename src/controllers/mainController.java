@@ -1,6 +1,7 @@
 package controllers;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import application.Main;
@@ -13,47 +14,32 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 
 
 public class mainController implements Initializable{
 
+	 
     @FXML
-    private Button newGameButton;
-
-    @FXML
-    private Button loadGameButton;
-
-    @FXML
-    private ImageView enterAp1;
-
-    @FXML
-    private ImageView enterAp2;
-
-    @FXML
-    private ImageView enterAp3;
-
-    @FXML
-    private ImageView enterAp4;
+    private BorderPane rootPane;
     
     @FXML
     private Button goButton;
+    
+    @FXML
+    private void clickedGoButton(Event event) throws IOException {
+    	BorderPane pane = FXMLLoader.load(getClass().getResource("/view/menuView.fxml"));
+    	rootPane.getChildren().setAll(pane);
+    };
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 		//open window 1
-		goButton.setOnMouseClicked((Event event)->openNewWindow("/view/menuView.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
-
-//		//open window 2
-//		enterAp2.setOnMouseClicked((Event event)->openNewWindow("/view/Application2Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
-//				
-//		//open window 3
-//		enterAp3.setOnMouseClicked((Event event)->openNewWindow("/view/Application3Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
-//
-//		//open window 4
-//		enterAp4.setOnMouseClicked((Event event)->openNewWindow("/view/Application4Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
+		//goButton.setOnMouseClicked((Event event)->openNewWindow("/view/menuView.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
+	
 
 	}
 

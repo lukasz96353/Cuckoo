@@ -1,6 +1,7 @@
 package controllers;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import application.Main;
@@ -13,14 +14,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 
 
 public class menuController implements Initializable{
 
-    
-    
+	@FXML
+    private BorderPane menuPane;
     
     @FXML
     private Button peButton;
@@ -34,12 +36,18 @@ public class menuController implements Initializable{
     @FXML
     private Button cepButton;
 
+    @FXML
+    private void peClicked(Event event) throws IOException {
+    	BorderPane pane = FXMLLoader.load(getClass().getResource("/view/AuthView.fxml"));
+    	menuPane.getChildren().setAll(pane);
+    };
+    
+    
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 		//open window 1
-		cepButton.setOnMouseClicked((Event event)->openNewWindow("/view/AuthView.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
-
+		//cepButton.setOnMouseClicked((Event event)->openNewWindow("/view/AuthView.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()))
 
 	}
 
