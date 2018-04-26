@@ -17,43 +17,29 @@ import javafx.stage.Stage;
 
 
 
-public class mainController implements Initializable{
+public class menuController implements Initializable{
 
-    @FXML
-    private Button newGameButton;
-
-    @FXML
-    private Button loadGameButton;
-
-    @FXML
-    private ImageView enterAp1;
-
-    @FXML
-    private ImageView enterAp2;
-
-    @FXML
-    private ImageView enterAp3;
-
-    @FXML
-    private ImageView enterAp4;
+    
+    
     
     @FXML
-    private Button goButton;
+    private Button peButton;
+    
+    @FXML
+    private Button epButton;
+    
+    @FXML
+    private Button cpeButton;
+    
+    @FXML
+    private Button cepButton;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 		//open window 1
-		goButton.setOnMouseClicked((Event event)->openNewWindow("/view/menuView.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
+		cepButton.setOnMouseClicked((Event event)->openNewWindow("/view/AuthView.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
 
-//		//open window 2
-//		enterAp2.setOnMouseClicked((Event event)->openNewWindow("/view/Application2Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
-//				
-//		//open window 3
-//		enterAp3.setOnMouseClicked((Event event)->openNewWindow("/view/Application3Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
-//
-//		//open window 4
-//		enterAp4.setOnMouseClicked((Event event)->openNewWindow("/view/Application4Wiew.fxml", ((Node)(event.getSource())).getScene().getWidth(), ((Node)(event.getSource())).getScene().getHeight()));
 
 	}
 
