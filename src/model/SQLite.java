@@ -55,9 +55,9 @@ public class SQLite {
 	        }
 	    }
 	  
-	    private Connection connect() {
+	    public Connection connect() {
 	        // SQLite connection string
-	        String url = "jdbc:sqlite:db/main.db";
+	        String url = "jdbc:sqlite:srct/resources/db/main.db";
 	        Connection conn = null;
 	        try {
 	            conn = DriverManager.getConnection(url);
@@ -69,13 +69,13 @@ public class SQLite {
 	        return conn;
 	    }
 	    
-	    private Connection connect(String dbName) {
+	    public Connection connect(String dbName) {
 	        // SQLite connection string
 	        String url = dbName;
 	        Connection conn = null;
 	        try {
 	            conn = DriverManager.getConnection(url);
-	            System.out.println("Conected to DB" + dbName);
+	            System.out.println("Conected to DB " + dbName);
 	        } catch (SQLException e) {
 	            System.out.println(e.getMessage());
 	            System.out.println("Not conected to DB");
@@ -106,14 +106,14 @@ public class SQLite {
 	    
 	    }
 	    
-	    public static void main(String[] args) {
-			// TODO Auto-generated method stub
-				
-			SQLite get = new SQLite(); 
-			get.connectTest("jdbc:sqlite:main.db");
-			
-			
-		}
+//	    public static void main(String[] args) {
+//			// TODO Auto-generated method stub
+//				
+//			SQLite get = new SQLite(); 
+//			get.connect();
+//			
+//			
+//		}
 	    
 	    
 	    

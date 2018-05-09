@@ -26,6 +26,13 @@ public class Main extends Application {
 	}
 
 	public static void main(String[] args) {
+
+		//Uruchomienie aplikacji
 		launch(args);
+		
+		//Połączenie z bazą - do testowania
+//		SQLite get = new SQLite(); 
+//		get.connect("jdbc:sqlite:src/resources/db/main.db");
+		
 	}
 }
