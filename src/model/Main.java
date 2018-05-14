@@ -32,7 +32,13 @@ public class Main extends Application {
 		
 		//Połączenie z bazą - do testowania
 //		SQLite get = new SQLite(); 
+//		get.selectAll(); 	
+		
+		
 //		get.connect("jdbc:sqlite:src/resources/db/main.db");
+		
+		
+		
 		
 	}
 }

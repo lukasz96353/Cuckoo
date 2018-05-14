@@ -57,7 +57,7 @@ public class SQLite {
 	  
 	    public Connection connect() {
 	        // SQLite connection string
-	        String url = "jdbc:sqlite:srct/resources/db/main.db";
+	        String url = "jdbc:sqlite:src/resources/db/main.db";
 	        Connection conn = null;
 	        try {
 	            conn = DriverManager.getConnection(url);
@@ -69,24 +69,27 @@ public class SQLite {
 	        return conn;
 	    }
 	    
-	    public Connection connect(String dbName) {
-	        // SQLite connection string
-	        String url = dbName;
-	        Connection conn = null;
-	        try {
-	            conn = DriverManager.getConnection(url);
-	            System.out.println("Conected to DB " + dbName);
-	        } catch (SQLException e) {
-	            System.out.println(e.getMessage());
-	            System.out.println("Not conected to DB");
-	        }
-	        return conn;
-	    }
+//	    public Connection connect(String dbName) {
+//	        // SQLite connection string
+//	        String url = dbName;
+//	        Connection conn = null;
+//	        try {
+//	            conn = DriverManager.getConnection(url);
+//	            System.out.println("Conected to DB " + dbName);
+//	        } catch (SQLException e) {
+//	            System.out.println(e.getMessage());
+//	            System.out.println("Not conected to DB");
+//	        }
+//	        return conn;
+//	    }
 	    
-	    // funkcje, których będziemy używali
+	    
+	    
+	    
+	    // FUNKCJE
 	    
 	    public void selectAll(){
-	        String sql = "SELECT ID, PL, ENG, USER, BASKET FROM main_table";
+	        String sql = "SELECT ID, PL, ENG, BASKET FROM main_table";
 	        
 	        try (Connection conn = this.connect();
 	             Statement stmt  = conn.createStatement();
@@ -97,7 +100,6 @@ public class SQLite {
 	                System.out.println(rs.getInt("ID") +  "\t" + 
 	                                   rs.getString("PL") + "\t" +
 	                                   rs.getString("ENG") + "\t" +
-	                                   rs.getString("USER") + "\t" +
 	                                   rs.getInt("BASKET"));
 	            }
 	        } catch (SQLException e) {
@@ -105,6 +107,18 @@ public class SQLite {
 	        }
 	    
 	    }
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    
 //	    public static void main(String[] args) {
 //			// TODO Auto-generated method stub
