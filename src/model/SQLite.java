@@ -220,6 +220,41 @@ public class SQLite {
 	    
 	    
 	    
+	    
+	    
+	    //****************************************************
+	    //Funkcja autoryzacji
+	    //***************************************************
+	    
+	    public static boolean checkUser(String login, String password) {
+	    	//podajemy jako parametry login i password, je¿eli znadjdziemy takiego u¿ytkownika w bazie zwracamy true, jak nie to false
+	    	return true;
+	    }
+	    
+	    
+	    //****************************************************
+	    //Tworzenie konta
+	    //***************************************************
+	    
+	    public static void createAccount(String login, String password) {
+	    	//podajê login i password, nale¿y dodaæ u¿ytkownika do nowej tabeli user. Jak bêdzie ok to informacje, ¿e konto zosta³o utworzone, jak nie to info, ¿e ju¿ jest taki login.
+	    }
+	    
+	    //****************************************************
+	    //Funkcja zwracajÄ…ca rozmiar bazy danych
+	    //***************************************************
+	    
+	    public int baseSize(){
+	    	//funkcja zwraca nam ile jest s³ówek w bazie, bym wiedzia³ z jakiego zakresu funkcja random ma losowaæ
+	    	return 5;
+	    }
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 //	    public static void main(String[] args) {
 //			// TODO Auto-generated method stub
 //				
